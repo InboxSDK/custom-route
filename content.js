@@ -1,8 +1,8 @@
-InboxSDK.load(1, 'custom-route').then(function(sdk) {
+InboxSDK.load(2, 'custom-route').then(sdk => {
 
-	var routeID = 'helloWorld/:country';
+	const routeID = 'helloWorld/:country';
 
-	sdk.Router.handleCustomRoute(routeID, function(customRouteView){
+	sdk.Router.handleCustomRoute(routeID, customRouteView => {
 		customRouteView.getElement().textContent = 'hello world! ' + customRouteView.getParams().country;
 	});
 
